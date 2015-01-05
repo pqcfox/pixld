@@ -1,4 +1,4 @@
-pixlr
+pixld
 =====
 
 usage: pixld.py [-h] [--width WIDTH] [--height HEIGHT] input tiles output
