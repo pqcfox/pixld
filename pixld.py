@@ -21,16 +21,16 @@ parser = argparse.ArgumentParser(
 parser.add_argument('input',
                     help='the base image for the mosaic')
 parser.add_argument('tiles',
-                    help='the directory containing the images \
-                    to use as tiles in the mosaic')
+                    help='the directory containing the images'
+                    ' to use as tiles in the mosaic')
 parser.add_argument('output',
                     help='the output image of the mosaic')
 parser.add_argument('--width', default=20,
-                    help='the width of a tile in the mosaic \
-                    (default: 20 pixels)')
+                    help='the width of a tile in the mosaic'
+                    ' (default: 20 pixels)')
 parser.add_argument('--height', default=20,
-                    help='the height of a tile in the mosaic \
-                    (default: 20 pixels)')
+                    help='the height of a tile in the mosaic'
+                    ' (default: 20 pixels)')
 
 args = parser.parse_args()
 size = (args.width, args.height)
