@@ -29,10 +29,10 @@ parser.add_argument('output',
                     help='the output image of the mosaic')
 parser.add_argument('-v', action='store_true',
                     help='turn on verbose mode')
-parser.add_argument('--width', default=20,
+parser.add_argument('--width', type=int, default=20,
                     help='the width of a tile in the mosaic'
                     ' (default: 20 pixels)')
-parser.add_argument('--height', default=20,
+parser.add_argument('--height', type=int, default=20,
                     help='the height of a tile in the mosaic'
                     ' (default: 20 pixels)')
 
