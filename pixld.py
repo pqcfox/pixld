@@ -12,7 +12,8 @@ def get_average_color(image):
     return tuple(value / num_pixels for value in pixel_sum)
 
 
-def square(image, size):
+def square(image, size, v):
+    if v: print 'Squaring image {0}...'.format(image)
     small_dim = min(image.size)
     return image.crop((0, 0, small_dim, small_dim)).resize(size)
 
@@ -37,7 +38,8 @@ parser.add_argument('--height', default=20,
 
 args = parser.parse_args()
 size = (args.width, args.height)
-images = [square(Image.open(os.path.join(args.tiles, i)), size)
+
+images = [square(Image.open(os.path.join(args.tiles, i)), size, args.v)
           for i in os.listdir(args.tiles)]
 color_map = collections.defaultdict(list)
 
